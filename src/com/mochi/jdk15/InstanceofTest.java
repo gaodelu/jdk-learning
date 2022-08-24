@@ -1,8 +1,5 @@
 package com.mochi.jdk15;
 
-
-import java.lang.invoke.MethodHandles;
-
 public class InstanceofTest {
 
     private String str;

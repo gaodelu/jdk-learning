@@ -1,10 +1,22 @@
 # JDK10新特性
+## 新功能和库的更新
+### 局部变量类型推断
 
-## 局部变量类型推断
+现在有var声明。它允许开发者在不指定其类型的情况下声明局部变量。变量的类型将从创建的实际对象的类型中推断出来。
 
-现在有var声明。它允许开发者在不指定其类型的情况下声明局部变量。变量的类型将从创建的实际对象的类型中推断出来。它被称为是 JDK 10 中开发人员唯一真正使用到的功能
+### Optional增强
 
-## 并行全垃圾回收器G1
+Optional.orElseThrow(),orElseThrow类中添加了一个新方法Optional。
+它是现有方法的同义词，现在是现有方法的首选替代get方法。
+
+### 集合创建方式
+
+- List.copyOf, Set.copyOf, 和Map.copyOf 这些方法从现有实例创建新的集合实例。
+- Collectors.toUnmodifiableList, Collectors.toUnmodifiableSet,Collectors.toUnmodifiableMap 这些方法允许将 a
+的元素Stream收集到不可修改的集合中
+
+## JVM优化
+### 并行全垃圾回收器G1
 
 Java10为G1引入多线程并行GC，同时会使用与年轻代回收和混合回收相同的并行工作线程数量，从而减少了Full
 GC的发生，以带来更好的性能提升，更大的吞吐量。Java中将采用并行化mark-sweep-compact算法，并使用与年轻代回收和混合回收相同数量的线程。具体并行线程数量可以通过: -XX:ParallelGCThreads
@@ -35,12 +47,3 @@ Java10中线程管控引入JVM安全点的概念，将允许在不运行全局JV
 显示的提高了现有的JVM性能开销。
 
 增加的参数为：-XX:ThreadLocalHandshakes (默认为开启)
-
-## 新增API
-
-- Optional.orElseThrow()    orElseThrow类中添加了一个新方法Optional。它是现有方法的同义词，现在是现有方法的首选替代get方法。
-- List.copyOf, Set.copyOf, 和Map.copyOf 这些方法从现有实例创建新的集合实例。
-- Collectors.toUnmodifiableList, Collectors.toUnmodifiableSet,Collectors.toUnmodifiableMap 这些方法允许将 a
-  的元素Stream收集到不可修改的集合中
-
-  
