@@ -6,7 +6,7 @@
 
 ### Optional增强
 
-Optional.orElseThrow(),orElseThrow类中添加了一个新方法Optional。
+Optional.orElseThrow(),orElseThrow类中添加了一个新方法。
 它是现有方法的同义词，现在是现有方法的首选替代get方法。
 
 ### 集合创建方式
