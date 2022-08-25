@@ -24,7 +24,7 @@ public class JFRTest {
     }
 
     public static void readRecordFile() throws IOException {
-        final Path path = Paths.get("/Users/gaodelu/1.jfr");
+        final Path path = Paths.get("1.jfr");
         final List<RecordedEvent> recordedEvents = RecordingFile.readAllEvents(path);
         for (RecordedEvent event : recordedEvents) {
             System.out.println(event.getStartTime());
